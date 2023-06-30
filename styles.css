@@ -122,7 +122,7 @@ input.valid:focus-visible {
 }
 
 input.invalid:focus {
-  background-color: hsl(6, 90%, 88%);
+  background-color: hsla(6, 87%, 91%, 1);
   outline: 2px solid orangered;
 }
 
