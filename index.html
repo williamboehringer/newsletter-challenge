@@ -12,9 +12,9 @@
 </head>
 <body>
   <main>
-    <!-- <div class="newsletter">
+    <div class="newsletter">
       <div class="image-mobile">
-        <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" class="mobile">
+        <img src="././assets/images/illustration-sign-up-mobile.svg" alt="" class="mobile">
       </div>
       <div class="signup" >
         <h1 class="section-title">
@@ -24,41 +24,46 @@
           <div class="list">
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
             <div class="list-item">
-              <img src="assets/images/icon-list.svg" alt="" class="list-icon">
+              <img src="././assets/images/icon-list.svg" alt="" class="list-icon">
               <span>Product discovery and building what matters</span>
             </div>
             <div class="list-item">
-              <img src="assets/images/icon-list.svg" alt="" class="list-icon">
+              <img src="./assets/images/icon-list.svg" alt="" class="list-icon">
               <span>Measuring to ensure updates are a success</span>
             </div>
             <div class="list-item">
-              <img src="assets/images/icon-list.svg" alt="" class="list-icon">
+              <img src="./assets/images/icon-list.svg" alt="" class="list-icon">
               <span>And much more!</span>
             </div>
           </div>
         </div>
-          <form action="" class="signup-form">
-            <label for="email">Email address</label>
-            <input type="email" id="email" placeholder="email@company.com">
+          <form class="signup-form" onsubmit="handleSubmit()" novalidate>
+            <div class="form-content">
+            <div class="label">
+              <label for="email">Email address</label>
+              <label for="email" class="error">Enter valid email</label>
+            </div>
+            <input type="email" placeholder="email@company.com">
+            </div>
+            <button class="button">Subscribe to monthly newsletter</button>
           </form>
-          <button class="button">Subscribe to monthly newsletter</button>
-
       </div>
       <div class="image-desktop">
-        <img src="assets/images/illustration-sign-up-desktop.svg" alt="" class="desktop">
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" class="desktop">
       </div>
-    </div> -->
-    <div class="newsletter-success">
+    </div>
+   <div class="newsletter-success">
       <div class="success-content">
-        <img src="assets/images/icon-list.svg" alt="" class="list-icon">
+        <img src="./assets/images/icon-list.svg" alt="" class="list-icon">
         <h1 class="section-title">Thanks for subscribing!</h1>
         <p>
           A confirmation email has been sent to <span>ash@loremcompany.com.</span>
           Please open it and click the button inside to confirm your subscription.
         </p>
       </div>
-      <button class="button">Dismiss message</button>
+      <button class="button" onclick="dismiss()">Dismiss message</button>
     </div>
   </main>
+  <script src="./index.js"></script>
 </body>
 </html>
