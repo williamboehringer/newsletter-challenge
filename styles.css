@@ -36,9 +36,8 @@ box-sizing: border-box;
 }
 
 main {
-    overflow: hidden;
+    overflow: scroll;
     display: grid;
-    place-items: center;
     min-height: 100vh;
 }
 
@@ -52,7 +51,7 @@ main {
 }
 
 .signup {
-    padding: 3rem 3rem 2rem 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     display: grid;
     align-content: start;
     gap: 2rem;
@@ -92,17 +91,39 @@ span {
     max-width: 1rem;
 }
 
-input {
+input[type=email] {
     display: block;
     line-height: 1;
-    padding: .8rem 0;
+    padding: 1rem;
     border-radius: .4rem;
-    border: .2px solid #EAEAEA;
-    font-size: .8rem;
+    border: 1px solid #EAEAEA;
+    font-size: .8rem
 }
 
-input::placeholder {
-    padding-left: 2rem;
+.label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .4rem;
+  font-weight: 900;
+  font-size: .7rem;
+}
+
+.error {
+  display: none;
+  color: #e5918b;
+}   
+
+input:focus {
+    outline: 2px solid var(--bg-color-2)
+}
+
+input.valid:focus-visible {
+    outline: 2px solid darkgreen;
+}
+
+input.invalid:focus {
+  background-color: #ffe8e6;
+  outline: 2px solid orangered;
 }
 
 .button {
@@ -119,15 +140,30 @@ input::placeholder {
     margin-inline: auto;
     max-height: 4rem;
   }
+  
+button:hover{
+  background: linear-gradient(90deg, #ff5379, #ff693a);
+  box-shadow: 0px 10px 1rem hsla(350, 800%, 80%, 0.8)
+}
 
 .signup-form {
     display: grid;
-    gap: .2rem;
+    gap: 1rem;
     margin-top: .7rem;
 }
 
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+}
 
 @media(min-width: 710px) {
+
+    main {
+        place-items: center;
+    }
+
     .newsletter {
         margin-inline: 2rem;
         padding: 1rem;
@@ -163,25 +199,23 @@ input::placeholder {
 
     .signup {
         align-items: center;
+        padding: 3rem 3rem 2rem 2rem;
         gap: 1rem;
-        padding: 3rem 3rem 2rem 3rem;
     }
 
     label {
         font-size: 0.7rem;
         font-weight: 900;
-        color: var(--bg-color);
     }
 
 }
 
 .newsletter-success {
-    margin-inline: 2rem;
-    padding: 10rem 3rem 3rem 3rem;
+    padding: 3rem;
     width: 100%;
     height: 100vh;
     background-color: white;
-    display: grid;
+    display: none;
     border-radius: 2rem;
     align-content: space-between;
 }
@@ -218,6 +252,7 @@ input::placeholder {
 
 @media(min-width: 710px) {
     .newsletter-success {
+        margin-inline: 2rem;
         padding: 3rem;
         width: min(30rem, 100%);
         height: min(30rem, 100%);
@@ -257,7 +292,7 @@ input::placeholder {
 
 @media(max-width: 520px) {
     .newsletter-success {
-        padding: 3rem;
+        padding: 2rem;
     }
 
     .newsletter-success .section-title {
