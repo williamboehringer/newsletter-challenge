@@ -2,7 +2,7 @@ document.querySelector('.signup-form').addEventListener('submit', function(event
     event.preventDefault()
   });
 
-document.querySelector('input').addEventListener('keypress', function(event){
+document.querySelector('input').addEventListener('input', function(){
     const error = document.querySelector('.error')
     const email = document.querySelector('input')
 
