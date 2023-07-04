@@ -1,22 +1,14 @@
-@font-face {
-    font-family: RobotoBold;
-    src: url('assets/fonts/Roboto-Bold.ttf');
-}
-
-@font-face {
-    font-family: RobotoRegular;
-    src: url('assets/fonts/Roboto-Regular.ttf');
-}
-
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
 
 :root {
     --bg-color: #36384D;
-    --bg-color-2: #232744;
+    --bg-color-2: hsl(234, 29%, 20%);
+    --bold-700: 700
 }
 
 @media (min-width: 710px) {
     body {
-      min-height: 100vh;
+      height: 100svh;
       background-color: var(--bg-color);
       display: grid;
       place-items: center;
@@ -31,8 +23,13 @@ box-sizing: border-box;
 
 *{
     margin: 0;
-    font: inherit;
-    font-family: RobotoRegular;
+    font-family: Roboto;
+    font-weight: 400;
+    color: var(--bg-color-2);
+}
+
+.newsletter {
+    background-color: white;
 }
 
 .mobile {
@@ -57,17 +54,13 @@ box-sizing: border-box;
 }
 
 .section-title {
-    font-family: RobotoBold;
     font-size: 2.7rem;
-    font-weight: 900;
-    color: var(--bg-color-2);
+    font-weight: var(--bold-700);
 }
 
 p,
 span {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--bg-color);
+    font-size: 16px;
 }
 
 .list {
@@ -91,14 +84,14 @@ input[type=email] {
     padding: 1rem;
     border-radius: .4rem;
     border: 1px solid #EAEAEA;
-    font-size: .8rem
+    font-size: .8rem;
 }
 
 .label {
   display: flex;
   justify-content: space-between;
   margin-bottom: .4rem;
-  font-weight: 900;
+  font-weight: var(--bold-700);
   font-size: .7rem;
 }
 
@@ -157,8 +150,8 @@ button:hover{
     .newsletter {
         margin-inline: 2rem;
         padding: 1rem;
-        width: 60rem;
-        height: 40rem;
+        width: 58rem;
+        height: 35rem;
         background-color: white;
         display: grid;
         grid-template-columns: 1.3fr 1fr;
@@ -173,7 +166,7 @@ button:hover{
     .desktop {
         display: flex;
         justify-content: end;
-        max-height: 100%;
+        max-height: 33rem;
     }
 
     .section-title {
@@ -188,14 +181,13 @@ button:hover{
 
 
     .signup {
-        align-items: center;
         padding: 3rem 3rem 2rem 2rem;
-        gap: 3.5rem;
+        justify-content: space-between;
     }
 
     label {
         font-size: 0.7rem;
-        font-weight: 900;
+        font-weight: var(--bold-700);
     }
 
     input[type=email] {
@@ -209,6 +201,7 @@ button:hover{
     display: none;
     border-radius: 2rem;
     align-content: space-between;
+    height: 100svh;
 }
 
 .newsletter-success .section-title {
@@ -225,8 +218,7 @@ button:hover{
 
 .newsletter-success span {
     font-size: 1.7rem;
-    font-weight: 900;
-    color: var(--bg-color-2);
+    font-weight: var(--bold-700);
 }
 
 .newsletter-success p {
@@ -269,12 +261,15 @@ button:hover{
         font-size: 1.1rem;
     }
 
-    .list p, .list span {
-        font-size: 1.2rem;
+    .signup-content {
+        gap: 2rem;
+    }
+
+    .list p, .list span, .subtitle p {
+        font-size: 1.1rem;
     }
 
     .newsletter-success .list-icon{
-        max-width: unset;
         width: 3rem;
     }
 }
