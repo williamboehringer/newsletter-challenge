@@ -35,12 +35,6 @@ box-sizing: border-box;
     font-family: RobotoRegular;
 }
 
-main {
-    overflow: scroll;
-    display: grid;
-    min-height: 100vh;
-}
-
 .mobile {
     width: min(44.375rem, 100%);
     max-height: 100%;
@@ -111,7 +105,7 @@ input[type=email] {
 .error {
   display: none;
   color: #e5918b;
-}   
+}
 
 input:focus {
     outline: 2px solid var(--bg-color-2)
@@ -140,7 +134,7 @@ input.invalid:focus {
     margin-inline: auto;
     max-height: 4rem;
   }
-  
+
 button:hover{
   background: linear-gradient(90deg, #ff5379, #ff693a);
   box-shadow: 0px 10px 1rem hsla(350, 800%, 80%, 0.8)
@@ -160,15 +154,11 @@ button:hover{
 
 @media(min-width: 710px) {
 
-    main {
-        place-items: center;
-    }
-
     .newsletter {
         margin-inline: 2rem;
         padding: 1rem;
-        max-width: 45rem;
-        max-height: 30rem;
+        width: 60rem;
+        height: 40rem;
         background-color: white;
         display: grid;
         grid-template-columns: 1.3fr 1fr;
@@ -183,7 +173,7 @@ button:hover{
     .desktop {
         display: flex;
         justify-content: end;
-        max-height: 28rem;
+        max-height: 100%;
     }
 
     .section-title {
@@ -200,7 +190,7 @@ button:hover{
     .signup {
         align-items: center;
         padding: 3rem 3rem 2rem 2rem;
-        gap: 1rem;
+        gap: 3.5rem;
     }
 
     label {
@@ -208,12 +198,13 @@ button:hover{
         font-weight: 900;
     }
 
+    input[type=email] {
+        font-size: 1.2rem;
+    }
 }
 
 .newsletter-success {
     padding: 3rem;
-    width: 100%;
-    height: 100vh;
     background-color: white;
     display: none;
     border-radius: 2rem;
@@ -254,9 +245,9 @@ button:hover{
     .newsletter-success {
         margin-inline: 2rem;
         padding: 3rem;
-        width: min(30rem, 100%);
-        height: min(30rem, 100%);
         gap: 2rem;
+        max-width: 35rem;
+        height: 30rem;
     }
 
     .newsletter-success .section-title {
@@ -276,6 +267,10 @@ button:hover{
     .newsletter-success p {
         line-height: 1.5;
         font-size: 1.1rem;
+    }
+
+    .list p, .list span {
+        font-size: 1.2rem;
     }
 
     .newsletter-success .list-icon{
