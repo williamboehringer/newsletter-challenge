@@ -6,15 +6,6 @@
     --bold-700: 700
 }
 
-@media (min-width: 710px) {
-    body {
-      height: 100svh;
-      background-color: var(--bg-color);
-      display: grid;
-      place-items: center;
-    }
-}
-
 *,
 *::after,
 *::before {
@@ -26,6 +17,11 @@ box-sizing: border-box;
     font-family: Roboto;
     font-weight: 400;
     color: var(--bg-color-2);
+}
+
+p,
+span {
+    font-size: 16px;
 }
 
 .newsletter {
@@ -56,11 +52,6 @@ box-sizing: border-box;
 .section-title {
     font-size: 2.7rem;
     font-weight: var(--bold-700);
-}
-
-p,
-span {
-    font-size: 16px;
 }
 
 .list {
@@ -146,6 +137,12 @@ button:hover{
 }
 
 @media(min-width: 710px) {
+    body {
+        height: 100svh;
+        background-color: var(--bg-color);
+        display: grid;
+        place-items: center;
+      }
 
     .newsletter {
         margin-inline: 2rem;
@@ -232,6 +229,25 @@ button:hover{
     display: block;
 }
 
+@media(max-width: 520px) {
+    .newsletter-success {
+        padding: 2rem;
+    }
+
+    .newsletter-success .section-title {
+        margin-top: .5rem;
+        font-size: 2.5rem;
+    }
+
+    .newsletter-success span {
+        font-size: 1rem;
+    }
+
+    .newsletter-success p {
+        line-height: 1.5;
+        font-size: 1rem;
+    }
+}
 
 @media(min-width: 710px) {
     .newsletter-success {
@@ -277,25 +293,5 @@ button:hover{
 @media(max-height: 710px) {
     .newsletter-success {
         padding: 3rem;
-    }
-}
-
-@media(max-width: 520px) {
-    .newsletter-success {
-        padding: 2rem;
-    }
-
-    .newsletter-success .section-title {
-        margin-top: .5rem;
-        font-size: 2.5rem;
-    }
-
-    .newsletter-success span {
-        font-size: 1rem;
-    }
-
-    .newsletter-success p {
-        line-height: 1.5;
-        font-size: 1rem;
     }
 }
