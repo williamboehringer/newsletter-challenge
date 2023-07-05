@@ -26,6 +26,8 @@ span {
 
 .newsletter {
     background-color: white;
+    height: 100svh;
+    display: grid;
 }
 
 .mobile {
@@ -33,7 +35,7 @@ span {
     max-height: 100%;
 }
 
-.desktop {
+.image-desktop {
     display: none;
 }
 
@@ -42,6 +44,7 @@ span {
     display: grid;
     align-content: start;
     gap: 2rem;
+    align-content: space-between;
 }
 
 .signup-content {
