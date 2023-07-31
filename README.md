@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://williamboehringer.github.io/newsletter-challenge/](https://williamboehringer.github.io/interactive-rating-component-main/)
+- Live Site URL: https://williamboehringer.github.io/newsletter-challenge/
 
 ### Built with
 
