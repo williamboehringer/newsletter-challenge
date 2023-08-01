@@ -31,7 +31,7 @@ span {
 }
 
 .mobile {
-    width: 100vw
+    width: clamp(17.5rem, 100vw, 50rem);
 }
 
 .image-desktop {
@@ -138,7 +138,7 @@ button:hover{
     justify-items: space-between;
 }
 
-@media(min-width: 710px) {
+@media(min-width: 800px) {
     body {
         height: 100svh;
         background-color: var(--bg-color);
@@ -149,7 +149,7 @@ button:hover{
     .newsletter {
         margin-inline: 2rem;
         padding: 1rem;
-        width: 58rem;
+        max-width: 58rem;
         height: 35rem;
         background-color: white;
         display: grid;
