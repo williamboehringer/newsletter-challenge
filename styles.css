@@ -251,7 +251,7 @@ button:hover{
     }
 }
 
-@media(min-width: 710px) {
+@media(min-width: 800px) {
     .newsletter-success {
         margin-inline: 2rem;
         padding: 3rem;
