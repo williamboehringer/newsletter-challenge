@@ -291,9 +291,3 @@ button:hover{
         width: 3rem;
     }
 }
-
-@media(max-height: 710px) {
-    .newsletter-success {
-        padding: 3rem;
-    }
-}
