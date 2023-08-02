@@ -25,13 +25,13 @@ span {
 }
 
 .newsletter {
+    min-height: 100svh;
     background-color: white;
-    height: 100svh;
     display: grid;
 }
 
 .mobile {
-    width: clamp(17.5rem, 100vw, 50rem);
+    width: 100%
 }
 
 .image-desktop {
@@ -150,6 +150,7 @@ button:hover{
         margin-inline: 2rem;
         padding: 1rem;
         max-width: 58rem;
+        min-height: unset;
         height: 35rem;
         background-color: white;
         display: grid;
